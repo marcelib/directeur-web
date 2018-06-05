@@ -4,6 +4,7 @@
     "alreadyJoined": "Already joined?",
     "createAccount": "Create account",
     "createNewAccount": "Create account",
+    "loginByGoogle": "Log in by Google",
     "email": "Email",
     "login": "Login",
     "password": "Password",
@@ -195,9 +196,6 @@
     "staticMessage": "This is a static modal, backdrop click will not close it.",
     "staticTitle": "Static Modal",
     "title": "Modals"
-  },
-  "navbar": {
-    "messageUs": "Send us your questions or feedback to"
   },
   "notifications": {
     "all": "See all notifications",

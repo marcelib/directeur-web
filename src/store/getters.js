@@ -6,6 +6,7 @@ const toggleWithoutAnimation = state => state.app.sidebar.withoutAnimation
 const config = state => state.app.config
 const palette = state => state.app.config.palette
 const isLoading = state => state.app.isLoading
+const userData = state => state.app.userData
 const breadcrumbs = state => {
   return (keyword) => utils.findInNestedByName(state.menu.items, keyword)
 }
@@ -17,5 +18,6 @@ export {
   config,
   palette,
   isLoading,
-  breadcrumbs
+  breadcrumbs,
+  userData
 }

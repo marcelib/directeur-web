@@ -4,7 +4,7 @@
       <img :src="photoSource" />
     </div>
     <h5 class="name">{{name}}</h5>
-    <span class="location"><span class="icon glyphicon glyphicon-map-marker"></span> {{location}}</span>
+    <span class="location">{{location}}</span>
     <div class="social">
       <a class="icon brandico brandico-facebook-rect"
          v-if="social.facebook" :href="'http://' + social.facebook" target="_blank"></a>
@@ -27,11 +27,12 @@
   @import "../../../sass/variables";
   @import "../../../sass/icons-styles";
 
-  $vuestic-profile-card-width: 12.6875rem;
-  $vuestic-profile-card-photo-diameter: 9.375rem;
+  $vuestic-profile-card-width: 12rem;
+  $vuestic-profile-card-photo-diameter: 6rem;
 
   .vuestic-profile-card {
     width: $vuestic-profile-card-width;
+    color: $vue-green;
     .photo {
       height: $vuestic-profile-card-photo-diameter;
       width: $vuestic-profile-card-photo-diameter;
@@ -47,18 +48,15 @@
     .name {
       margin-top: 1.325rem;
       margin-bottom: 0;
+      color: $white;
     }
     .location {
       margin-top: 0.8125rem;
       .icon {
-        color: $lighter-gray;
         font-size: $font-size-larger;
       }
       &:hover {
         cursor: pointer;
-        .icon {
-          color: red;
-        }
       }
     }
     .social {
