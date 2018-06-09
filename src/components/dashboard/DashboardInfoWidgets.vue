@@ -6,9 +6,9 @@
           <div class="stats">
             <div class="stats-number">
               <i class="ion ion-arrow-up-c text-primary stats-icon"></i>
-              59
+              {{ employeeCount }}
             </div>
-            <div class="stats-title">{{'dashboard.elements' | translate}}</div>
+            <div class="stats-title">{{'dashboard.employeeCount' | translate}}</div>
           </div>
         </div>
       </vuestic-widget>
@@ -19,26 +19,22 @@
           <div class="stats">
             <div class="stats-number">
               <i class="ion ion-arrow-down-c text-danger stats-icon"></i>
-              12
+              {{ departmentCount }}
             </div>
-            <div class="stats-title">{{'dashboard.versions' | translate}}</div>
+            <div class="stats-title">{{'dashboard.departmentCount' | translate}}</div>
           </div>
         </div>
       </vuestic-widget>
     </div>
     <div class="col-md-6 col-xl-3">
-      <vuestic-widget class="info-widget brand-danger">
+      <vuestic-widget class="info-widget">
         <div class="info-widget-inner">
-          <div class="info-widget-inner has-chart">
+          <div class="info-widget-inner">
             <div class="stats">
               <div class="stats-number">
-                425
+                {{ averageSalary }}
               </div>
-              <div class="stats-title">Commits</div>
-            </div>
-            <div class="chart-container">
-              <vuestic-progress-bar type="circle" ref="circleProgress" :colorName="'white'" :backgroundColorName="'danger'"
-                            :startColorName="'danger'"></vuestic-progress-bar>
+              <div class="stats-title">{{'dashboard.averageSalary' | translate}}</div>
             </div>
           </div>
         </div>
@@ -50,9 +46,9 @@
           <div class="stats">
             <div class="stats-number">
               <i class="ion ion-android-people stats-icon icon-wide"></i>
-              5
+              {{ positionsCount }}
             </div>
-            <div class="stats-title">{{'dashboard.teamMembers' | translate}}</div>
+            <div class="stats-title">{{'dashboard.positionsCount' | translate}}</div>
           </div>
         </div>
       </vuestic-widget>
@@ -61,12 +57,29 @@
 </template>
 
 <script>
+  import {mapGetters} from 'vuex'
+
   export default {
     name: 'dashboard-info-widgets',
-
-    mounted () {
-      this.$refs.circleProgress.$data.value = 70
-    }
+    computed: {
+      ...mapGetters([
+        'employees',
+        'departments',
+        'positions',
+      ]),
+      employeeCount () {
+        return this.employees.length
+      },
+      departmentCount () {
+        return this.departments.length
+      },
+      positionsCount () {
+        return this.positions.length
+      },
+      averageSalary () {
+        return Math.floor((this.employees.reduce((acc, item) => acc + item.salary, 0) / this.employeeCount)) + ' PLN'
+      }
+    },
   }
 </script>
 

@@ -1,5 +1,9 @@
 const state = {
   userData: {},
+  departments: [],
+  employees: [],
+  positions: [],
+  departmentStatistics: [],
   sidebar: {
     opened: false,
     withoutAnimation: false

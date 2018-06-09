@@ -15,6 +15,18 @@ const mutations = {
   [types.SET_USER_DATA] (state, value) {
     state.userData = value
   },
+  [types.SET_DEPARTMENTS_DATA] (state, value) {
+    state.departments = value.departments
+  },
+  [types.SET_EMPLOYEES_DATA] (state, value) {
+    state.employees = value.employees
+  },
+  [types.SET_POSITIONS_DATA] (state, value) {
+    state.positions = value.positions
+  },
+  [types.SET_DEPARTMENT_STATISTICS] (state, value) {
+    state.departmentStatistics = value.departmentStatistics
+  },
   setLoading (state, isLoading) {
     state.isLoading = isLoading
   }

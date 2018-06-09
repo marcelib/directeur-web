@@ -32,11 +32,12 @@
     "verticalBarChart": "Vertical Bar Chart"
   },
   "dashboard": {
-    "elements": "Elementos",
+    "employeeCount": "Elementos",
+    "averageSalary": "Average Salary",
     "success": "ÉXITO",
     "successMessage": "Ha leído correctamente este mensaje de alerta importante.",
-    "teamMembers": "Miembros del Equipo",
-    "versions": "Versiones"
+    "positionsCount": "Positions",
+    "departmentCount": "Departamentos"
   },
   "notificationsPage": {
     "alerts": {

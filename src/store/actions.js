@@ -19,6 +19,12 @@ export const actions = {
   },
   isToggleWithoutAnimation ({ commit }, value) {
     commit(types.TOGGLE_WITHOUT_ANIMATION, value)
+  },
+  initialDataFetch ({commit, dispatch}) {
+    dispatch('fetchDepartments')
+    dispatch('fetchPositions')
+    dispatch('fetchEmployees')
+    dispatch('fetchDepartmentStatistics')
   }
 }
 

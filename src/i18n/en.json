@@ -39,12 +39,13 @@
     "dataVisualization": "Data Visualization",
     "success": "SUCCESS",
     "successMessage": "You successfully read this important alert message.",
-    "elements": "Elements",
+    "employeeCount": "Employees",
+    "averageSalary": "Average salary",
     "features": "Features",
     "setupProfile": "Setup Profile",
-    "teamMembers": "Team Members",
+    "positionsCount": "Positions",
     "usersAndMembers": "Users & Members",
-    "versions": "Versions"
+    "departmentCount": "Departments"
   },
   "notificationsPage": {
     "alerts": {

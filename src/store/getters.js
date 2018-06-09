@@ -1,4 +1,4 @@
-import utils from 'services/utils'
+import utils from '../services/utils'
 
 const menuItems = state => state.menu.items
 const sidebarOpened = state => state.app.sidebar.opened
@@ -7,6 +7,11 @@ const config = state => state.app.config
 const palette = state => state.app.config.palette
 const isLoading = state => state.app.isLoading
 const userData = state => state.app.userData
+const employees = state => state.app.employees
+const departments = state => state.app.departments
+const departmentStatistics = state => state.app.departmentStatistics
+const positions = state => state.app.positions
+
 const breadcrumbs = state => {
   return (keyword) => utils.findInNestedByName(state.menu.items, keyword)
 }
@@ -19,5 +24,9 @@ export {
   palette,
   isLoading,
   breadcrumbs,
-  userData
+  userData,
+  employees,
+  departments,
+  positions,
+  departmentStatistics
 }

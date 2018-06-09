@@ -9,6 +9,7 @@ export const auth = {
       HTTP.get('api/users/current')
         .then(response => {
           commit(types.SET_USER_DATA, response.data)
+          dispatch('initialDataFetch')
         }).catch(e => {
           commit(types.SET_USER_DATA, {})
           router.push('/auth/login')
