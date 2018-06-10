@@ -6,13 +6,13 @@ export default {
       dataClass: 'text-center'
     },
     {
-      name: 'name',
-      title: 'user',
-      sortField: 'name'
+      name: 'departmentName',
+      title: 'Department name',
+      sortField: 'departmentName'
     },
     {
-      name: 'salary',
-      title: 'score'
+      name: 'departmentDescription',
+      title: 'Department description'
     }
   ],
   sortFunctions: {

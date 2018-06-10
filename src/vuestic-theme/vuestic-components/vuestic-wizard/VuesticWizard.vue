@@ -67,6 +67,8 @@
         default: 'horizontal'
       },
       lastStepLabel: {default: 'Confirm'},
+      restartLabel: {default: 'Restart'},
+      onWizardComplete: {type: Function},
       onNext: {},
       onBack: {}
     },
@@ -122,6 +124,7 @@
       completeWizard () {
         this.wizardCompleted = true
         this.goNext()
+        this.onWizardComplete()
       },
       isLastStep () {
         return this.currentStep === this.steps.length - 1

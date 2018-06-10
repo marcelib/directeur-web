@@ -9,7 +9,6 @@
           <leaflet-map></leaflet-map>
         </div>
         <div :slot="'extra.tabs.setupProfile' | translate" class="d-flex justify-content-center">
-          <setup-profile-tab wizardType="simple"></setup-profile-tab>
         </div>
       </vuestic-tabs>
     </vuestic-widget>
@@ -34,14 +33,12 @@
 
 <script>
   import OverviewTab from 'components/dashboard/features-tab/FeaturesTab.vue'
-  import SetupProfileTab from 'components/dashboard/setup-profile-tab/SetupProfileTab.vue'
   import LeafletMap from 'components/maps/leaflet-maps/LeafletMap.vue'
 
   export default {
     name: 'extra',
     components: {
       LeafletMap,
-      SetupProfileTab,
       OverviewTab
     },
     data () {

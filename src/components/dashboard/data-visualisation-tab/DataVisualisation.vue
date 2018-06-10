@@ -14,18 +14,7 @@
           <vuestic-chart v-bind:data="expensesByDepartmentChartData" :options="chartOptions"
                          type="donut"></vuestic-chart>
         </div>
-      </div><!--
-      <div class="col-md-6">
-        <vuestic-data-table
-          :apiMode="apiMode"
-          :tableData="tableData"
-          :tableFields="tableFields"
-          :itemsPerPage="itemsPerPage"
-          :onEachSide="onEachSide"
-          :sortFunctions="sortFunctions"
-          :dataModeFilterableFields="dataModeFilterableFields"
-        />
-      </div>-->
+      </div>
     </div>
   </div>
 </template>
@@ -33,8 +22,6 @@
 <script>
   import Vue from 'vue'
   import BadgeColumn from 'components/tables/BadgeColumn.vue'
-  import TableData from './TableData'
-  import FieldsDef from './fields-definition'
   import {mapGetters} from 'vuex'
   import {STATISTICS_PALETTE} from '../../../data/charts/StatisticsPalette'
 
@@ -46,20 +33,6 @@
     data () {
       return {
         donutChartData: {labels: [], datasets: [{}]},
-        apiMode: false,
-        sortFunctions: FieldsDef.sortFunctions,
-        tableData: TableData,
-        onEachSide: 1,
-        tableFields: FieldsDef.tableFields,
-        dataModeFilterableFields: ['name'],
-        itemsPerPage: [
-          {
-            value: 5
-          },
-          {
-            value: 6
-          }
-        ],
       }
     },
     computed: {
@@ -118,12 +91,8 @@
   @import "~bootstrap/scss/mixins/breakpoints";
 
   .chart-container {
-    padding: 0 2rem;
+    padding: 0 2rem 4rem;
     height: 24rem;
-  }
-
-  .data-visualisation-tab {
-    padding-bottom: 35px;
   }
 
 

@@ -20,8 +20,8 @@
               <!--Footer-->
               <div class="modal-footer">
                 <slot name="footer">
-                  <button type="button" :class="okClass" @click="ok" :disabled="okDisabled">{{okText}}</button>
                   <button type="button" :class="cancelClass" @click="cancel" :disabled="cancelDisabled">{{cancelText}}</button>
+                  <button type="button" :class="okClass" @click="ok" :disabled="okDisabled">{{okText}}</button>
                 </slot>
               </div>
             </div>
@@ -73,14 +73,23 @@
         type: Boolean,
         default: false
       },
+      show: {
+        type: Boolean,
+        default: false
+      },
       cancelDisabled: {
         type: Boolean,
         default: false
-      }
+      },
+      onCancel: {
+        type: Function,
+      },
+      onOk: {
+        type: Function,
+      },
     },
     data () {
       return {
-        show: false,
         duration: 500
       }
     },
@@ -119,12 +128,12 @@
       },
       ok () {
         this.$emit('ok')
-        this.show = false
+        this.onOk()
         window.removeEventListener('keyup', this.listenKeyUp)
       },
       cancel () {
         this.$emit('cancel')
-        this.show = false
+        this.onCancel()
         window.removeEventListener('keyup', this.listenKeyUp)
       },
       clickMask () {

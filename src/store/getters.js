@@ -12,6 +12,12 @@ const departments = state => state.app.departments
 const departmentStatistics = state => state.app.departmentStatistics
 const positions = state => state.app.positions
 
+
+const modal = state => state.app.modal
+const showModal = state => state.app.modal.show
+const onModalConfirm = state => state.app.modal.onConfirm
+const departmentId = state => state.app.modal.departmentId
+
 const breadcrumbs = state => {
   return (keyword) => utils.findInNestedByName(state.menu.items, keyword)
 }
@@ -28,5 +34,9 @@ export {
   employees,
   departments,
   positions,
-  departmentStatistics
+  departmentStatistics,
+  modal,
+  showModal,
+  onModalConfirm,
+  departmentId
 }

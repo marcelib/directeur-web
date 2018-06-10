@@ -3,7 +3,7 @@ import {departments} from './departments'
 import {employees} from './employees'
 import {positions} from './positions'
 import {statistics} from './statistics'
-import * as validation from './validation'
+import {validation} from './validation'
 
 export const apiActions = {
   ...auth,
@@ -11,7 +11,8 @@ export const apiActions = {
   ...departments,
   ...employees,
   ...positions,
-  ...statistics
+  ...statistics,
+  ...validation
 }
 
 export default apiActions

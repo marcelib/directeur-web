@@ -27,6 +27,12 @@ const mutations = {
   [types.SET_DEPARTMENT_STATISTICS] (state, value) {
     state.departmentStatistics = value.departmentStatistics
   },
+  [types.SHOW_ERROR_MODAL] (state, value) {
+    state.showErrorModal = value
+  },
+  [types.SHOW_MODAL] (state, value) {
+    state.modal = value
+  },
   setLoading (state, isLoading) {
     state.isLoading = isLoading
   }

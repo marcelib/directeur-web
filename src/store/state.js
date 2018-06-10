@@ -26,6 +26,13 @@ const state = {
       lighterGray: '#ddd'
     }
   },
+  modal: {
+    type: undefined,
+    show: false,
+    text: '',
+    title: '',
+    onConfirm: undefined,
+  },
   isLoading: true
 }
 

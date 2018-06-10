@@ -1,4 +1,14 @@
 {
+  "departments": {
+    "tables": {
+      "title": "Departments overview",
+      "headings" : {
+        "departmentName": "Department name",
+        "departmentDescription": "Department description",
+        "departmentDirector": "Department director"
+      }
+    }
+  },
   "auth": {
     "agree": "I agree to",
     "alreadyJoined": "Already joined?",
@@ -36,6 +46,7 @@
     "bubbleChart": "Bubble Chart"
   },
   "dashboard": {
+    "setupDepartment": "Department Creator",
     "dataVisualization": "Data Visualization",
     "success": "SUCCESS",
     "successMessage": "You successfully read this important alert message.",
@@ -45,6 +56,7 @@
     "setupProfile": "Setup Profile",
     "positionsCount": "Positions",
     "usersAndMembers": "Users & Members",
+    "departmentTab": "Departments",
     "departmentCount": "Departments"
   },
   "notificationsPage": {
